@@ -1,5 +1,4 @@
 import { RECEIVE_PHONES } from '../actions/phones'
-
 export const MOVE_INCART = 'MOVE_INCART'
 
 export default function phones(state={}, action){
@@ -12,12 +11,12 @@ export default function phones(state={}, action){
         case MOVE_INCART:
             return{
                 ...state,
-                // action.id:{
-                //     ...stateaction.id ,
-                //     inCart: 'true'
-                // }
+                [action.id]:{
+                    ...state[action.id],
+                    inCart: 'true'
+                }
             }
         default:
-        return state
+            return state
     }
 }
