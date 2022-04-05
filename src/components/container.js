@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Phone from './Phone'
 import ShoppingCart from './ShoppingCart'
+import "semantic-ui-css/semantic.min.css";
 
 class Container extends Component {
     render(){
         const { phones } = this.props
         return(
-            
+
             <div className='container'>
-                
+
                 <div className="shopping">
                     <h1>Phone Brands</h1>
                     {Object.keys(phones).map((phone) =>(
@@ -20,7 +21,7 @@ class Container extends Component {
                         <h1>Shopping Details</h1>
                         {/* display shopping detail here. */}
                 </dive>
-                
+
             </div>
         )
     }

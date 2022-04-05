@@ -1,18 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-
-import reducer from './reducers'
-
-import './index.css';
-import App from './components/App';
-
-let store = createStore(reducer)
-
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./reducers";
+import middleware from "./middleware";
+import "./index.css";
+import App from "./components/App";
+let store = createStore(reducer, middleware);
 render(
-  <Provider store={ store }>
+  <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

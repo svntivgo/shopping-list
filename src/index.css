@@ -50,5 +50,16 @@ h1{
   width: 700px;
   height: 500px;
   text-align: right;
-  float: left; 
+  float: left;
+}
+.shopping-list {
+  width: 700px;
+  height: 250px;
+  text-align: center;
+  float: right;
+  margin-top: 10%;
+  margin-right: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
